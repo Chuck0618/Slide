@@ -98,6 +98,7 @@
     }
   },
   "dependencies": {
-    "gulp-cli": "^2.3.0"
+    "gulp-cli": "^2.3.0",
+    "katex": "^0.16.2"
   }
 }
