@@ -10,135 +10,8 @@
 	</head>
 
 	<body>
-        <!-- <div class="reveal">
-			<div class="slides" >
-                <div font-color="red" text-align="left">
-                   !!!!!!!!!!!!!1ocated at reveal.
-                </div>
-            </div>
-        </biv> -->
         <style type="text/css">
-             .reveal .slides{
-             border:medium double rgb(71, 100, 12);
-             border-bottom: 45px solid #006fb0;
-            text-align: left;
-            }
-           
-            .reveal .slide-number{
-                right: 50px;
-                left: auto;
-                bottom: 35px;
-            }
-            .reveal .slides .face .titlebox{
-                /* border: 20px solid rgb(98, 14, 101); */
-                position: absolute;
-                background-color: rgb(1, 124, 194);
-                font-size:1.0em;
-                left:180px;
-                top: 180px;
-                right: 0px;
-                height: 180px;
-                /* justify-items: center; */
-                align-items: center;
-                display: flex;
-            }
-            .reveal .slides .face .EmptyBox{
-                /* border: 20px solid rgb(98, 14, 101); */
-                position: absolute;
-                background-color: #7EBDDC;
-                font-size:1.0em;
-                left:0px;
-                top: 360px;
-                width: 180px;
-                right: auto;
-                height: 180px;
-                /* justify-items: center; */
-                align-items: center;
-                display: flex;
-            }
-            .reveal .slides .face .titlebox h1{
-                /* border: 20px solid rgb(98, 14, 101); */
-                 /* font-size:1.0em;   */
-                 position: absolute;
-                 color: white; 
-                text-transform: capitalize;
-                margin: 15px 0 0px 50px;
-            }
-            .reveal .slides .face h2{
-                /* border: 10px solid rgb(14, 29, 101); */
-                font-size:1.0em;  
-                 position: absolute;
-                 color: #003A7D; 
-                text-transform: none;
-                position: absolute;
-                /* background-color: rgb(137, 137, 191); */
-                font-size:0.9em;
-                font-weight: 100;
-                left:180px;
-                /* bottom: 180px; */
-                right: 0px;
-                height: 40px;
-                margin-left: 50px;
-                top: 680px;
-                /* bottom: 400px; */
-            }
-            .reveal .slides .face .Support{
-                /* border: 10px solid rgb(14, 29, 101); */
-                /* font-size:1.0em;   */
-                 position: absolute;
-                 color: #003A7D; 
-                text-transform: none;
-                position: absolute;
-                /* background-color: rgb(137, 137, 191); */
-                font-size:0.9em;
-                font-weight: 100;
-                left:180px;
-                /* bottom: 180px; */
-                right: 0px;
-                height: 40px;
-                margin-left: 50px;
-                top: 480px;
-                /* bottom: 400px; */
-            }
-
-            .reveal .slides .face .LogoBox{
-                /* border: 2px solid rgb(152, 98, 36); */
-                top: 690px;
-                /* bottom: 40px; */
-                left:90px;
-                width: 90px;
-                opacity: 80%;
-                position:absolute;
-                z-index: 1;
-            }
-
-            .reveal .slides section:not(.face)::before {
-                content: "";
-                position: absolute;
-               z-index: -1;
-                font-size:1.0em;
-                left:0px;
-                top: 0px;
-                right: 180px;
-                height: 120px;
-                /* justify-items: center; */
-                align-items: center;
-                display: flex;
-                clip-path: polygon(0% 0, 100% 00%, 94% 100%, 0 100%);
-                background-color: #0067A8;
-                background-image: 
-repeating-linear-gradient(125deg, transparent,
-transparent 2px,
-rgba(0,0,0,.2) 2px,
-rgba(0,0,0,.2) 4px, 
-transparent 4px),
-repeating-linear-gradient(125deg, transparent,
-transparent 90%,
-white 90%,
-white 95%,
-transparent 95%,
-transparent 100%);
-            }
+            
         </style>
 		<div class="reveal">
 			<div class="slides">
@@ -163,7 +36,7 @@ transparent 100%);
                 <!-- Slides are separated by three dashes (the default) -->
                 <section data-markdown >
                     <script type="text/template" id="main_div">
-                        hello
+                        Do not type anything there!!!
                     </script>
                 </section>
                 <section class="face">
@@ -174,7 +47,7 @@ transparent 100%);
                     </div>
                     <div class="titlebox">
                         <h1>
-                            Thank you for your attention!
+                            Thanks for your attention!
                         </h1>
                     </div>
                     <div class="Support">
@@ -204,31 +77,33 @@ Slide 2
 这是一个`$ \mathbb{F}_2$`. 
 测试一下不加 “ ` ” 会出来什么：$ \mathbb{F}_4(x) \to\mathbb{F}_4(y) $。
 ---
-## demo 2
-Slide 3
-测试一下中文！
+## 测试一下中文
+支持一般的中文输入！可以在CSS中改变字体，一般用户请忽略！
+
 ---
 ## 数学公式
-第一个公式：
-$$
-\sin^2(x) + \cos^2(x) = 1.
-$$.
-第二个公式：The Lorenz Equations 3
+- 内联公式 $
+\sin^2(x) + \cos^2(x) = 1$。
+- 行间公式：The Lorenz Equations
 `\[\begin{aligned}
 \dot{x} & = \sigma(y-x) \\
 \dot{y} & = \rho x - y - xz \\
 \dot{z} & = -\beta z + xy
 \end{aligned} \]`
+- 请注意如下：
+```text
+虽然说数学公式不必要用 ` 包起来，但为了必要的稳定性，推荐使用 ` 包起来。
+```
 ---
 ## Hello 4
 4
 `$ \frac{\sin(x)}{ \cos(x)} = \tan (x) $`
 ---
-## Hello
-Hello 
-- amazonaws
-- bbb
-- ccccccccccccccccc
+## 测试一下Note
+如果写了 `Note`, 加冒号，表示这部分内部是Speaker的注释，不会出现在Slide里。 
+
+Note:
+I am in the notice, can u see me?
 ---
 <!-- .slide: data-background="rgb(250,200,205)" -->
 ## 关于背影色
@@ -244,8 +119,9 @@ Hello
 - Item 2 <!-- .element: class="fragment" data-fragment-index="1" -->
 ---
 ## Demo 2
-
 Slide 2
+
+The END. 
         </script>
 		<script>
             var main_div= document.querySelector("#main_div");
