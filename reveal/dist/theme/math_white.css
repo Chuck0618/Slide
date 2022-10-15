@@ -154,7 +154,10 @@
  .reveal ol {
    list-style-type: decimal;
  }
- 
+ .reveal ol li::marker{
+  color: red;
+}
+
  .reveal ul {
    list-style-type: square;
  }
