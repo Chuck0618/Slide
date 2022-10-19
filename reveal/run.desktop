@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Gulp Server
+Comment=Gulp Server over the Reveal
+Exec=node_modules/gulp-cli/bin/gulp.js serve
+Icon=visual-studio-code
+Categories=Internet;
+Terminal=true

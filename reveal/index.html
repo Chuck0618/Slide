@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<p>
+			Hello! Can you see me ?
+		</p>
+
+		<div class="slides">
+			<section>Slide 1</section>
+			<section>Slide 2
+				<aside class="notes">
+					<p>Some notes</p>
+				</aside>
+				<p>Some slide text</p>
+				<aside class="notes">
+					<p>and some more notes</p>
+				</aside>
+			</section>
+			<section data-markdown="examples/markdown.md" data-background="background/mathbg.jpg"
+				data-separator="^\n---\n" data-separator-vertical="$x"></section>
+		</div>
+		<div class="slides">
+			<section>1</section>
+			<section>2</section>
+			<section>
+				<iframe class="default-iframe" data-src="#"></iframe>
+				<iframe class="preload-iframe" data-src="#" data-preload></iframe>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/math/math.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			mathjax3: {
+				mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js',
+				tex: {
+					inlineMath: [['$', '$']]
+				},
+				options: {
+					skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+				},
+			},
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3]
+		});
+	</script>
+</body>
+
+</html>

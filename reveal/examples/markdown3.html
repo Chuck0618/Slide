@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>reveal.js - Markdown Example</title>
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/white.css" id="theme">
+        <link rel="stylesheet" href="../plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+        <!-- <div class="reveal">
+			<div class="slides" >
+                <div font-color="red" text-align="left">
+                   !!!!!!!!!!!!!1ocated at reveal.
+                </div>
+            </div>
+        </biv> -->
+        <style type="text/css">
+             .reveal .slides{
+             border:medium double rgb(71, 100, 12);
+             border-bottom: 45px solid rgba(21, 25, 107, 0.5);
+            text-align: left;
+            }
+           
+            .reveal .slide-number{
+                right: auto;
+                left: 20px;
+            }
+            .reveal .slides .face .titlebox{
+                /* border: 20px solid rgb(98, 14, 101); */
+                position: absolute;
+                background-color: rgba(40, 60, 220, 0.753);
+                font-size:1.0em;
+                left:180px;
+                top: 180px;
+                right: 0px;
+                height: 180px;
+                /* justify-items: center; */
+                align-items: center;
+                display: flex;
+            }
+            .reveal .slides .face .EmptyBox{
+                /* border: 20px solid rgb(98, 14, 101); */
+                position: absolute;
+                background-color: rgba(40, 60, 220, 0.553);
+                font-size:1.0em;
+                left:0px;
+                top: 360px;
+                width: 180px;
+                right: auto;
+                height: 180px;
+                /* justify-items: center; */
+                align-items: center;
+                display: flex;
+            }
+            .reveal .slides .face .titlebox h1{
+                /* border: 20px solid rgb(98, 14, 101); */
+                 font-size:1.0em;  
+                 position: absolute;
+                 color: white; 
+                text-transform: capitalize;
+                margin-left:  50px;
+            }
+            .reveal .slides .face h2{
+                /* border: 10px solid rgb(14, 29, 101); */
+                font-size:1.0em;  
+                 position: absolute;
+                 color: rgb(30, 87, 210); 
+                text-transform: none;
+                position: absolute;
+                /* background-color: rgb(137, 137, 191); */
+                font-size:0.9em;
+                font-weight: 100;
+                left:180px;
+                /* bottom: 180px; */
+                right: 0px;
+                height: 40px;
+                margin-left: 50px;
+                top: 680px;
+                /* bottom: 400px; */
+            }
+
+            .reveal .slides .face .LogoBox{
+                /* border: 2px solid rgb(152, 98, 36); */
+                top: 690px;
+                /* bottom: 40px; */
+                left:90px;
+                width: 90px;
+                opacity: 80%;
+                position:absolute;
+                z-index: 1;
+            }
+        </style>
+		<div class="reveal">
+			<div class="slides">
+  
+                <section class="face">
+                    <div class ="LogoBox">
+                        <img src="assets/bimsa.png"/>
+                    </div>
+                    <div class ="EmptyBox">
+                    </div>
+                    <div class="titlebox">
+                        <h1>
+                            Introduction to Differential Stacks<br/>
+                            非线性李理论研讨会
+                        </h1>
+                    </div>
+                    
+                    <h2>
+                        Chuangqiang Hu <br />
+                        Yanqi Lake Beijing Institute of Mathematical
+                    </h2>
+                </section>
+                <!-- Slides are separated by three dashes (the default) -->
+                <section data-markdown >
+                    <script type="text/template" id="main_div">
+                        hello
+                    </script>
+                </section>
+            </div>
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+        <script src="../plugin/markdown/markdown.js"></script>
+        <script src="../plugin/highlight/highlight.js"></script>
+        <script src="../plugin/notes/notes.js"></script>
+        <script src="../plugin/math/math.js"></script>
+        <script type="text/markdown" id="main_src">
+            ## Demo 1
+            Slide `$ \sin(x)= \sum_{i=1}^\infty $`
+            ---
+            <!-- .slide: data-background="rgb(250,200,205)" -->
+                      
+            Markdown content
+            ## demo 1
+            Slide 2
+            这是一个`$ \mathbb{F}_2$`. 
+            ---
+            ## demo 1
+            Slide 3
+            测试一下中文！
+            ---
+
+            ## The Lorenz Equations
+            `\[\begin{aligned}
+            \dot{x} & = \sigma(y-x) \\
+            \dot{y} & = \rho x - y - xz \\
+            \dot{z} & = -\beta z + xy
+            \end{aligned} \]`
+            ---
+            Hello
+            4
+            `$ \frac{\sin(x)}{ \cos(x)} = \tan (x) $`
+            ---
+            ## Hello
+            
+
+            Hello 
+            - amazonaws
+            - bbb
+            - ccccccccccccccccc
+            ---
+
+            ## Demo 二
+            Slide 1.2
+            !!!!
+            ---
+            ## Element attributes
+
+            - Item 1 <!-- .element: class="fragment" data-fragment-index="2" -->
+            - Item 2 <!-- .element: class="fragment" data-fragment-index="1" -->
+            ---
+            ## Demo 2
+
+            Slide 2
+        </script>
+		<script>
+            var main_div= document.querySelector("#main_div");
+            main_div.innerHTML=document.querySelector("#main_src").innerHTML;
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+                width: 1560 ,
+                height: 900,
+                slideNumber: true,
+				history: true,
+				center: false,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+			});
+		</script>    
+	</body>
+</html>
