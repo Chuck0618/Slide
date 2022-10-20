@@ -78,7 +78,6 @@
  .reveal h5,
  .reveal h6 {
    margin: var(--r-heading-margin);
-   color: var(--r-heading-color);
    font-family: var(--r-heading-font);
    font-weight: var(--r-heading-font-weight);
    line-height: var(--r-heading-line-height);
@@ -90,10 +89,12 @@
  
  .reveal h1 {
    font-size: var(--r-heading1-size);
+   color: var(--r-heading-color);
  }
  
  .reveal h2 {
    font-size: var(--r-heading2-size);
+   color: var(--r-heading-color);
  }
  
  .reveal h3 {
