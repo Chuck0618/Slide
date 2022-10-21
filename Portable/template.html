@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>reveal.js - Markdown Example</title>
+		<link rel="stylesheet" href="./assets/reveal.css">
+		<link rel="stylesheet" href="./dist/theme/math_white.css" id="theme">
+        <link rel="stylesheet" href="./plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+        <style type="text/css">
+            
+        </style>
+		<div class="reveal">
+			<div class="slides">
+                <section class="face">
+                    <div class ="LogoBox">
+                        <img src="./examples/assets/bimsa.png"/>
+                    </div>
+                    <div class ="EmptyBox">
+                    </div>
+                    <div class="titlebox">
+                        <h1>
+                            Introduction to Differential Stacks<br/>
+                            非线性李理论研讨会
+                        </h1>
+                    </div>
+                    
+                    <h2>
+                        Chuangqiang Hu <br />
+                        Yanqi Lake Beijing Institute of Mathematical
+                    </h2>
+                </section>
+                <!-- Slides are separated by three dashes (the default) -->
+                <section data-markdown >
+                    <script type="text/template" id="main_div">
+                        Do not type anything there!!!
+                    </script>
+                </section>
+                <section class="face">
+                    <div class ="LogoBox">
+                        <img src="./examples/assets/bimsa.png"/>
+                    </div>
+                    <div class ="EmptyBox">
+                    </div>
+                    <div class="titlebox">
+                        <h1>
+                            Thanks for your attention!
+                        </h1>
+                    </div>
+                    <div class="Support">
+                        技术支持: <br />
+                        <ul>
+                            <li>
+                                Reveal.jl 
+                            </li>
+							<li> KaTeX
+							</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+		</div>
+
+		<script src="./dist/reveal.js"></script>
+        <script src="./plugin/markdown/markdown.js"></script>
+        <script src="./plugin/highlight/highlight.js"></script>
+        <script src="./plugin/notes/notes.js"></script>
+        <script src="./plugin/math/math.js"></script>
+        <script type="text/markdown" id="main_src">
+## Demo 0
+Slide `$\sin(x)= \sum_{i=1}^\infty \frac{1}{{2i+1}} x^{2i+1}$`
+---
+            
+## 测试 li
+1. 第一个观点
+2. 第二个观点
+	- 我们要做什么
+		- 备注1
+		- 备注2
+	- 我们要准备什么
+	- 我们要怎么做
+3. 第三个观点
+---
+## 数学公式
+- 内联公式 $
+\sin^2(x) + \cos^2(x) = 1$。
+- 行间公式：The Lorenz Equations
+`\[\begin{aligned}
+\dot{x} & = \sigma(y-x) \\
+\dot{y} & = \rho x - y - xz \\
+\dot{z} & = -\beta z + xy
+\end{aligned} \]`
+- 请注意如下：
+```text
+虽然说数学公式不必要用 ` 包起来，但为了必要的稳定性，推荐使用 ` 包起来。
+```
+---
+## Hello 4
+4
+`$ \frac{\sin(x)}{ \cos(x)} = \tan (x) $`
+---
+## 测试一下Note
+如果写了 `Note`, 加冒号，表示这部分内部是Speaker的注释，不会出现在Slide里。 
+
+Note:
+I am in the notice, can u see me?
+---
+<!-- .slide: data-background="rgb(250,200,205)" -->
+## 关于背影色
+你可以使用如下
+```html
+<!-- .slide: data-background="rgb(250,200,205)" -->
+```
+!!!!
+---
+## Element attributes
+
+- Item 1 <!-- .element: class="fragment" data-fragment-index="2" -->
+- Item 2 <!-- .element: class="fragment" data-fragment-index="1" -->
+---
+## Demo 2
+Slide 2
+
+The END. 
+        </script>
+		<script>
+            var main_div= document.querySelector("#main_div");
+            main_div.innerHTML=document.querySelector("#main_src").innerHTML;
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+                width: 1560 ,
+                height: 900,
+                slideNumber: true,
+				history: true,
+				center: false,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+			});
+		</script>    
+	</body>
+</html>
