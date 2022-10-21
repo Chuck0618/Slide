@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>reveal.js - Markdown Example</title>
 		<link rel="stylesheet" href="./assets/reveal.css">
-		<link rel="stylesheet" href="./dist/theme/math_white.css" id="theme">
-        <link rel="stylesheet" href="./plugin/highlight/monokai.css">
+		<link rel="stylesheet" href="./assets/math_white.css" id="theme">
+        <link rel="stylesheet" href="./assets/monokai.css">
 	</head>
 
 	<body>
@@ -17,7 +17,7 @@
 			<div class="slides">
                 <section class="face">
                     <div class ="LogoBox">
-                        <img src="./examples/assets/bimsa.png"/>
+                        <img src="./assets/bimsa.png"/>
                     </div>
                     <div class ="EmptyBox">
                     </div>
@@ -41,7 +41,7 @@
                 </section>
                 <section class="face">
                     <div class ="LogoBox">
-                        <img src="./examples/assets/bimsa.png"/>
+                        <img src="./assets/bimsa.png"/>
                     </div>
                     <div class ="EmptyBox">
                     </div>
@@ -64,11 +64,11 @@
             </div>
 		</div>
 
-		<script src="./dist/reveal.js"></script>
-        <script src="./plugin/markdown/markdown.js"></script>
-        <script src="./plugin/highlight/highlight.js"></script>
-        <script src="./plugin/notes/notes.js"></script>
-        <script src="./plugin/math/math.js"></script>
+		<script src="./assets/reveal.js"></script>
+        <script src="./assets/markdown.js"></script>
+        <script src="./assets/highlight.js"></script>
+        <script src="./assets/notes.js"></script>
+        <script src="./assets/math.js"></script>
         <script type="text/markdown" id="main_src">
 ## Demo 0
 Slide `$\sin(x)= \sum_{i=1}^\infty \frac{1}{{2i+1}} x^{2i+1}$`
@@ -86,7 +86,7 @@ Slide `$\sin(x)= \sum_{i=1}^\infty \frac{1}{{2i+1}} x^{2i+1}$`
 ---
 ## 数学公式
 - 内联公式 $
-\sin^2(x) + \cos^2(x) = 1$。
+\frac{\sin^2(x) + \cos^2(x)}{e^x+e^{-x}} = \frac{1}{{e^x+e^{-x}}}$.
 - 行间公式：The Lorenz Equations
 `\[\begin{aligned}
 \dot{x} & = \sigma(y-x) \\
@@ -137,6 +137,8 @@ The END.
                 slideNumber: true,
 				history: true,
 				center: false,
+                katex: {
+                        local: './assets/katex', },
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
 			});
 		</script>    
