@@ -70,11 +70,12 @@
         <script src="./assets/notes.js"></script>
         <script src="./assets/math.js"></script>
         <script type="text/markdown" id="main_src">
-## Demo 0
-Slide 
+## 基本使用
+- 这是一个数学PPT的模版。请使用 `$ --- $` 作为分页符。
+- 每页PPT的标题使用 `$ \#\# $` 符号。
 ---
             
-## 测试 li
+## 测试列表结构
 1. 第一个观点
 2. 第二个观点
 	- 我们要做什么
@@ -95,17 +96,16 @@ Slide
 \dot{y} & = \rho x - y - xz \\
 \dot{z} & = -\beta z + xy
 \end{aligned} \]`
-- 请注意如下：
-```text
-虽然说数学公式不必要用 ` 包起来，但为了必要的稳定性，推荐使用 ` 包起来。
-```
+- 数学公式兼容基础的 `Latex` 语法，细节可以参考 `Katex`。需特别注意：
+尽管一般公式不必要用 $\backprime$ 包起来，但为了必要的稳定性，还是推荐使用 $\backprime$ 包起来。
+
 ---
 ## Hello 4
 4
 `$ \frac{\sin(x)}{ \cos(x)} = \tan (x) $`
 ---
 ## 测试一下Note
-如果写了 `Note`, 加冒号，表示这部分内部是Speaker的注释，不会出现在Slide里。 
+如果在一页PPT里 `$\text{Note}:$`，表示这页的余下内容是Speaker的注释，不会出现在 Slide 里。 
 
 Note:
 I am in the notice, can u see me?
