@@ -4,9 +4,9 @@
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>reveal.js - Markdown Example</title>
-		<link rel="stylesheet" href="./dist/reveal.css">
-		<link rel="stylesheet" href="./dist/theme/math_white.css" id="theme">
-        <link rel="stylesheet" href="./plugin/highlight/monokai.css">
+		<link rel="stylesheet" href="./assets/reveal.css">
+		<link rel="stylesheet" href="./assets/math_white.css" id="theme">
+        <link rel="stylesheet" href="./assets/monokai.css">
 	</head>
 
 	<body>
@@ -17,7 +17,7 @@
 			<div class="slides">
                 <section class="face">
                     <div class ="LogoBox">
-                        <img src="./examples/assets/bimsa.png"/>
+                        <img src="./assets/bimsa.png"/>
                     </div>
                     <div class ="EmptyBox">
                     </div>
@@ -41,7 +41,7 @@
                 </section>
                 <section class="face">
                     <div class ="LogoBox">
-                        <img src="./examples/assets/bimsa.png"/>
+                        <img src="./assets/bimsa.png"/>
                     </div>
                     <div class ="EmptyBox">
                     </div>
@@ -58,26 +58,24 @@
                             </li>
 							<li> KaTeX
 							</li>
-                            <li>
-                                Markdown.jl
-                            </li>
                         </ul>
                     </div>
                 </section>
             </div>
 		</div>
 
-		<script src="./dist/reveal.js"></script>
-        <script src="./plugin/markdown/markdown.js"></script>
-        <script src="./plugin/highlight/highlight.js"></script>
-        <script src="./plugin/notes/notes.js"></script>
-        <script src="./plugin/math/math.js"></script>
+		<script src="./assets/reveal.js"></script>
+        <script src="./assets/markdown.js"></script>
+        <script src="./assets/highlight.js"></script>
+        <script src="./assets/notes.js"></script>
+        <script src="./assets/math.js"></script>
         <script type="text/markdown" id="main_src">
-## Demo 0
-Slide `$\sin(x)= \sum_{i=1}^\infty \frac{1}{{2i+1}} x^{2i+1}$`
+## 基本使用
+- 这是一个数学PPT的模版。请使用 `$ --- $` 作为分页符。
+- 每页PPT的标题使用 `$ \#\# $` 符号。
 ---
             
-## 测试 li
+## 测试列表结构
 1. 第一个观点
 2. 第二个观点
 	- 我们要做什么
@@ -88,25 +86,26 @@ Slide `$\sin(x)= \sum_{i=1}^\infty \frac{1}{{2i+1}} x^{2i+1}$`
 3. 第三个观点
 ---
 ## 数学公式
-- 内联公式 $
-\sin^2(x) + \cos^2(x) = 1$。
+- 内联公式1：`$\sin(x)= \sum_{i=1}^\infty \frac{1}{{2i+1}} x^{2i+1}$`
+
+- 内联公式2：$\frac{\sin^2(x) + \cos^2(x)}{e^x+e^{-x}} = \frac{1}{{e^x+e^{-x}}}$.
 - 行间公式：The Lorenz Equations
+
 `\[\begin{aligned}
 \dot{x} & = \sigma(y-x) \\
 \dot{y} & = \rho x - y - xz \\
 \dot{z} & = -\beta z + xy
 \end{aligned} \]`
-- 请注意如下：
-```text
-虽然说数学公式不必要用 ` 包起来，但为了必要的稳定性，推荐使用 ` 包起来。
-```
+- 数学公式兼容基础的 `Latex` 语法，细节可以参考 `Katex`。需特别注意：
+尽管一般公式不必要用 $\backprime$ 包起来，但为了必要的稳定性，还是推荐使用 $\backprime$ 包起来。
+
 ---
 ## Hello 4
 4
 `$ \frac{\sin(x)}{ \cos(x)} = \tan (x) $`
 ---
 ## 测试一下Note
-如果写了 `Note`, 加冒号，表示这部分内部是Speaker的注释，不会出现在Slide里。 
+如果在一页PPT里 `$\text{Note}:$`，表示这页的余下内容是Speaker的注释，不会出现在 Slide 里。 
 
 Note:
 I am in the notice, can u see me?
@@ -124,12 +123,10 @@ I am in the notice, can u see me?
 - Item 1 <!-- .element: class="fragment" data-fragment-index="2" -->
 - Item 2 <!-- .element: class="fragment" data-fragment-index="1" -->
 ---
-## 测试文献
-+ something is wonderful!
-+ sometimes it is amazing!
+## Demo 2
+Slide 2
 
-###### 这里放一个参考文献，*标题hello*，其它信息
-
+The END. 
         </script>
 		<script>
             var main_div= document.querySelector("#main_div");
@@ -142,6 +139,8 @@ I am in the notice, can u see me?
                 slideNumber: true,
 				history: true,
 				center: false,
+                katex: {
+                        local: './assets/katex', },
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
 			});
 		</script>    
